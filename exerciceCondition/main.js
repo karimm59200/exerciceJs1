@@ -1,11 +1,11 @@
-let email ="Karim-megri@hotmail.fr", mdp="Karim991";
+let email = "Karim-megri@hotmail.fr",
+  mdp = "Karim991";
 
-email = prompt("Veuillez entrer votre email.");
-mdp = prompt ("Veuillez entrer votre mot de passe.");
+emailUser = prompt("Veuillez entrer votre email.");
+mdpUser = prompt("Veuillez entrer votre mot de passe.");
 
-if (email ==="karim-megri@hotmail.fr" && mdp==="karim991") {
+if (email === emailUser && mdp === mdpUser) {
   alert("Welcome, bienvenue à vous ! ");
 } else {
   alert("Oups, il y a un problème ! ");
 }
-
