@@ -17,5 +17,5 @@ if (anciennete > 10 ) {
 if(  age >=  46 && age <= 49){
   indemnite = indemnite + salaire*2;// indeminte += salaire*2;
 } else if ( age >= 50 ) {
-  indemnite += salaire * 5;
+  indemnite += salaire * 5;   
 }
