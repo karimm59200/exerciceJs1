@@ -1,0 +1,129 @@
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69
+$ ^[[200~echo "# TP_merge_rebase_p69" >> README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/karimm59200/TP_merge_rebase_p69.git
+git push -u origin mainbash: $'\E[200~echo': command not found
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69
+$ git init
+Initialized empty Git repository in C:/Users/karim/OneDrive/Bureau/TP-Merge-Rebase-69/.git/
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (master)
+$ git add README.md
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (master)
+$ git commit -m "first commit"
+[master (root-commit) c092a58] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (master)
+$ git branch -M main
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git remote add origin https://github.com/karimm59200/TP_merge_rebase_p69.git
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 208 bytes | 104.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/karimm59200/TP_merge_rebase_p69.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git add index.html
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git commit -m " C1 "
+[main 2f2a265]  C1
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git log --oneline
+2f2a265 (HEAD -> main)  C1
+c092a58 (origin/main) first commit
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git branch button
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git checkout button
+Switched to branch 'button'
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (button)
+$ git status
+On branch button
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (button)
+$ git add index.html
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (button)
+$ git commit -m"c2"
+[button c0ed0ca] c2
+ 1 file changed, 1 insertion(+)
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (button)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (button)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git merge button
+Updating 2f2a265..c0ed0ca
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git commit -m " merge de button dans main"
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 776 bytes | 388.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/karimm59200/TP_merge_rebase_p69.git
+   c092a58..c0ed0ca  main -> main
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/TP-Merge-Rebase-69 (main)
+$ git branch -a
+  button
+* main
+  remotes/origin/main

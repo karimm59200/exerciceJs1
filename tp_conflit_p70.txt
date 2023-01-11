@@ -1,0 +1,134 @@
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70
+$ echo "# tp_p70" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/karimm59200/tp_p70.git
+git push -u origin main
+Initialized empty Git repository in C:/Users/karim/OneDrive/Bureau/tp-p70/.git/
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+[master (root-commit) 2b5b080] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 215 bytes | 215.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/karimm59200/tp_p70.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$ git add index.html
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$ git commit -m "C1"
+[main dd6a9b3] C1
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$ git add index.html
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$ git commit -m "C2"
+[main d905cff] C2
+ 1 file changed, 1 insertion(+)
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$ git log --oneline
+d905cff (HEAD -> main) C2
+dd6a9b3 C1
+2b5b080 (origin/main) first commit
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$ git checkout dd6a
+Note: switching to 'dd6a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at dd6a9b3 C1
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 ((dd6a9b3...))
+$ git checkout -b B1
+Switched to a new branch 'B1'
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (B1)
+$ git status
+On branch B1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (B1)
+$ git add index.html
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (B1)
+$ git commit -m "C3"
+[B1 557dc48] C3
+ 1 file changed, 1 insertion(+)
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (B1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$ git merge B1
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main|MERGING)
+$
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main|MERGING)
+$ git add index.html
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main|MERGING)
+$ git commit -m " merge ok"
+[main 5e4440a]  merge ok
+
+karim@LAPTOP-AV2UFMKP MINGW64 ~/OneDrive/Bureau/tp-p70 (main)
+$
